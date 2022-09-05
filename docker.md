@@ -67,3 +67,4 @@ carlos@e8d842490502:/var/www$ composer install
 ### [Composer install](https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies) 
 
 > It resolves all dependencies listed in your composer.json file and writes all of the packages and their exact versions to the composer.lock file, locking the project to those specific versions.
+> 
