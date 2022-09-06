@@ -67,4 +67,51 @@ carlos@e8d842490502:/var/www$ composer install
 ### [Composer install](https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies) 
 
 > It resolves all dependencies listed in your composer.json file and writes all of the packages and their exact versions to the composer.lock file, locking the project to those specific versions.
-> 
+
+
+
+## .env e docker-compose.ymlm
+
+Podemos passar parâmetros do arquivo `.env` para o `docker-compose.yml`, desde que esteja no mesmo nível de pasta: ${DB_PASSWORD};
+
+> Compose supports declaring default environment variables in an environment file named .env placed in the project directory. 
+
+Assim como passamos ao `.env` a informação do banco de dados, usnado o nome da app criada no `docker-compose.yml`:
+
+```shell
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=curso_laravel_9
+DB_USERNAME=root
+DB_PASSWORD=root
+
+```
+
+O `mysql` faz referência ao nome do container no `docker-compose.yml`:
+
+```shell
+    # db mysql
+    mysql:
+        container_name: especializati-mysql
+        image: mysql:5.7.22
+        restart: unless-stopped
+        environment: 
+            MYSQL_DATABASE: ${DB_DATABASE}
+            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+            MYSQL_PASSWORD: ${DB_PASSWORD}
+            MYSQL_USER: ${DB_USERNAME}
+        volumes: 
+            - ./.docker/mysql/dbdata:/var/lib/mysql
+        ports: 
+            - "3388:3306"
+        networks: 
+            - laravel-9
+```
+
+## Docker network
+
+O [network][docker-network] é o parâmetro que garante que cada container possa 
+sse comunicar com o outro. 
+
+[docker-network]: https://docs.docker.com/network/

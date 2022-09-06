@@ -93,3 +93,31 @@ public function show($id)
         dd('users@how', $id);
     }
 ```
+
+
+## seeders
+
+`seeders` fica na pasta `database>seeders`. 
+
+Para criar um `seeder`, vamos usar o `artisan`:
+
+`php artisan make:seeder UserSeeder`
+
+A `factory` pode ser usada para acionar varias vezes um `seeder`.
+
+Ao usar um `seeder`, devemos, ao menos, definir os parâmetros do model que estejam como `$fillable`;
+
+:warning: ao criar um novo `seeder`, não deixar de adicioná-lo ao método `run()` do `DataBaseSeeder.php`.
+
+```shell
+public function run()
+    {
+        $this->call([
+            UsersSeeder::class;
+        ]);
+    }
+```
+
+Quando um seeder estiver no mesmo **namespace** que o `DataBaseSeeder.php`, não precisa ser importado.
+
+Executando um `seeder`: `php artisan db:seed`
