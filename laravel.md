@@ -76,7 +76,7 @@ Em `resources>views`, deve-se criar o subdiretório e o nome da view adicionando
 
 `index.blade.php`
 
-Ele irá automaticamente identificar a view nomeada na rota e irá usar o blade para renderizar a view. 
+Ele irá automaticamente identificar a view nomeada na rota e irá usar o [`Blade`](./blade.md) para renderizar a view. 
 :warning: Não esquecer de adicionar o sufixo `.blade.php`;  
 
 Mais de um método pode ser criado em um mesmo `controller`.
@@ -121,3 +121,23 @@ public function run()
 Quando um seeder estiver no mesmo **namespace** que o `DataBaseSeeder.php`, não precisa ser importado.
 
 Executando um `seeder`: `php artisan db:seed`
+
+## Eloquent
+
+O [`Eloquent`][doc_eloquent] é o ORM do laravel.
+
+::warning:: Before getting started, be sure to configure a database connection in your application's config/database.php configuration file.
+
+Para mais infos sobre processo de queries, ver [documentação][doc_eloquent_query].
+
+Algumas observações:  
+
+* O método `get()` retorna um array;
+* O método `find()` faz um select baseado no id;
+
+`$user = User::find($id);`
+
+`return redirect()->back();`
+
+[doc_eloquent]: https://laravel.com/docs/9.x/eloquent
+[doc_eloquent_query]: https://laravel.com/docs/9.x/queries
