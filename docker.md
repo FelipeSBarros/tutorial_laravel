@@ -70,7 +70,7 @@ carlos@e8d842490502:/var/www$ composer install
 
 
 
-## .env e docker-compose.ymlm
+## .env e docker-compose.yml
 
 Podemos passar parâmetros do arquivo `.env` para o `docker-compose.yml`, desde que esteja no mesmo nível de pasta: ${DB_PASSWORD};
 

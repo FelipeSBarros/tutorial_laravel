@@ -26,8 +26,8 @@ O Docker compose recebe as informações sobre banco de dados direto do `.env` e
 
 As migrações ficam na pasta `databse>migrations`. Algumas tabelas são criadas automaticamente, como usuários e senha.
 
-No méodo `up()` a tabela é criada;
-No méodo `Down()` a tabela é criada;
+No método `up()` a tabela é criada;
+No método `Down()` a tabela é criada;
 
 
 * `php artisan migrate`

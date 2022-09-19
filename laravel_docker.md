@@ -4,6 +4,7 @@ Passo-a-passo de instalação do laravel e demais dependencias usando `dcoker`. 
 [Repositório original][repo_especializeTI]
 
 [Algumas coisas sobre docker](./docker.md)
+[Sobre `laradock`](./laradock.md)
 
 ### Instalação
 
