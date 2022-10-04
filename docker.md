@@ -76,7 +76,7 @@ Podemos passar parâmetros do arquivo `.env` para o `docker-compose.yml`, desde 
 
 > Compose supports declaring default environment variables in an environment file named .env placed in the project directory. 
 
-Assim como passamos ao `.env` a informação do banco de dados, usnado o nome da app criada no `docker-compose.yml`:
+Assim como passamos ao `.env` a informação do banco de dados, usando o nome da app criada no `docker-compose.yml`:
 
 ```shell
 DB_CONNECTION=mysql

@@ -24,7 +24,7 @@ Arquivo onde ficarão as informações sensíveis do projeto, como senha, portas
 
 Após o clone do laravel e antes de rodar os containers, é importante configurar em `nginx>sites>default.conf`.
 
-No caso de estarmos trabaçhando com mais um um projeto, seria o caso de criar um arquivo `.conf` que tenha o mesmo nome da pasta ao qual o projeto se encontra. Exemplo: `imibio.conf`.
+No caso de estarmos trabalhando com mais um um projeto, seria o caso de criar um arquivo `.conf` que tenha o mesmo nome da pasta ao qual o projeto se encontra. Exemplo: `imibio.conf`.
 
 :warning: Caso os dockers já estiverem em execução, sera necessário reiniciá-los:
 
